@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-size: 20px;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+    color: var(--Very-Dark-Blue);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    width: 64.5px;
+    height: 19.5px;
+    margin: 2rem auto;
+}
+
+h1 span {
+    font-weight: 300;
+    color: var(--Gray);
+}
+
+p {
+    font-size: 0.9rem;
+    margin: 0.8rem auto;
+}
+
+.notify {
+    display: flex;
+    margin: 1rem auto;
+    width: 45%;
+    position: relative;
+}
+
+#email {
+    border: 1px solid var(--Gray);
+    outline: none;
+    border-radius: 1.5rem;
+    height: 3rem;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+#email::placeholder {
+    color: var(--Gray);
+}
+
+#button {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 1.5rem;
+    background-color: var(--Blue);
+    color: white;
+    margin-left: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: var(--Pale-Blue);
+}
+
+#error {
+    position: absolute;
+    bottom: -2rem;
+    left: 1.5rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--Light-Red);
+    display: none;
+}
+
+#dashboard{
+    width: 45%;
+    margin: 2rem auto;
+}
+
+footer {
+    color: var(--Gray);
+    font-size: 0.5rem;
+}
+
+.share-bar svg {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5rem;
+    fill: var(--Blue);
+    border: 1px solid var(--Gray);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.share-bar svg:hover {
+    cursor: pointer;
+    background-color: var(--Blue);
+    fill: white;
+}
+
+@media screen and (max-width: 376px) {
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+
+    .notify {
+        width: 80%;
+        flex-direction: column;
+    }
+
+    #email {
+        height: 2rem;
+        padding: 1rem 1.5rem;
+    }
+
+    #button {
+        height: 2rem;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    #dashboard {
+        width: 80%;
+    }
+}
